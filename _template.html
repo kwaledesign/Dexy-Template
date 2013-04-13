@@ -1,7 +1,18 @@
-{% extends '_base.html' -%}
-
-{% block page -%}
-<div id="page">
+<!DOCTYPE html>
+<html lang="en">
+{% block head -%}
+{% include 'includes/_head.html' -%}
+{% endblock %}
+<body>
+    <nav>
+    </nav>   
+    {% block page -%}
+    <div id="page">
     {{ content }}
-</div>
-{% endblock -%}
+    </div>
+    {% endblock %}
+    {% block footer -%}
+    {% include 'includes/_footer.html' %}
+    {%- endblock %}
+</body>
+</html>
